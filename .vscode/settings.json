@@ -1,6 +1,6 @@
 {
     "liveServer.settings.port": 5501,
-    "cursor.composer.textSizeScale": 1.3,
+    "cursor.composer.textSizeScale": 1,
     "debug.console.fontSize": 14,
     "scm.inputFontSize": 18,
     "terminal.integrated.fontSize": 14,
