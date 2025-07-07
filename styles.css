@@ -204,7 +204,7 @@ nav {
     align-items: center;
     justify-content: flex-start;
     min-height: 580px; /* Set min-height instead of fixed height for responsiveness */
-    background: url('hero-background.png') no-repeat center center/cover;
+    background: url('png-images/hero-background.png') no-repeat center center/cover;
     position: relative;
     box-sizing: border-box;
 }
