@@ -519,6 +519,18 @@ nav {
     overflow: hidden; /* To contain the decorative ellipses */
 }
 
+#faq h2 {
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+}
+
+.faq-subtitle {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
 .faq-container {
     max-width: 800px;
     margin: 0 auto;
