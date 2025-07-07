@@ -1,0 +1,9 @@
+{
+    "liveServer.settings.port": 5501,
+    "cursor.composer.textSizeScale": 1.3,
+    "debug.console.fontSize": 14,
+    "scm.inputFontSize": 18,
+    "terminal.integrated.fontSize": 14,
+    "workbench.editor.tabSizingFixedMinWidth": 50,
+    "editor.cursorStyle": "line"
+}
