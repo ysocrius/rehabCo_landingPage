@@ -16,7 +16,7 @@
                     <img src="png-images/rehab-logo.png" alt="RehabCo Logo">
                 </div>
                 <ul class="nav-links">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Service</a></li>
                     <li><a href="#why-us">Why Us</a></li>
@@ -375,9 +375,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const navLinks = document.querySelectorAll('.nav-links a');
-            const sections = document.querySelectorAll('main section');
 
-            // Add ID to hero section for accurate tracking
             const heroSection = document.querySelector('.hero');
             if (heroSection && !heroSection.id) {
                 heroSection.id = 'home';
@@ -386,45 +384,26 @@
             const observerOptions = {
                 root: null,
                 rootMargin: '0px',
-                threshold: 0.55 // Trigger when 55% of the section is visible
+                threshold: 0.5
             };
 
-            const observer = new IntersectionObserver((entries) => {
-                let anySectionIntersecting = false;
+            const observer = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        anySectionIntersecting = true;
                         const id = entry.target.getAttribute('id');
                         navLinks.forEach(link => {
                             link.classList.remove('active');
-                            // Use '#' for the home link, and '#id' for others
-                            const href = link.getAttribute('href');
-                            if ((href === '#' && id === 'home') || href === `#${id}`) {
+                            if (link.getAttribute('href') === `#${id}`) {
                                 link.classList.add('active');
                             }
                         });
                     }
                 });
-
-                 // If scrolling up and no section is intersecting, keep the last active or set home
-                if (!anySectionIntersecting) {
-                    // This case can be complex, for now, we'll just ensure home is active when at the top
-                     if (window.scrollY < 200) {
-                         navLinks.forEach(link => link.classList.remove('active'));
-                         const homeLink = document.querySelector('.nav-links a[href="#"]');
-                         if(homeLink) homeLink.classList.add('active');
-                     }
-                }
             }, observerOptions);
-
-            sections.forEach(section => {
-                if (section.id) {
-                    observer.observe(section);
-                }
+            
+            document.querySelectorAll('main section[id]').forEach(section => {
+                 observer.observe(section);
             });
-             // Set home as active by default
-            const homeLink = document.querySelector('.nav-links a[href="#"]');
-            if(homeLink) homeLink.classList.add('active');
         });
     </script>
 </body>
