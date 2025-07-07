@@ -28,5 +28,15 @@ pnpm-debug.log*
 !.vscode/extensions.json
 .idea/
 
-# macOS
-.DS_Store 
+# System files
+.DS_Store
+Thumbs.db
+
+# Temporary files and directories
+.tmp
+.cache
+
+# Coverage reports
+/coverage
+/lcov-report
+.nyc_output 
