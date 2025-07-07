@@ -266,19 +266,6 @@ nav {
     overflow: hidden;
 }
 
-.services::before {
-    content: '';
-    position: absolute;
-    width: 241px;
-    height: 241px;
-    background: linear-gradient(to bottom, var(--primary-color), var(--primary-dark));
-    border-radius: 50%;
-    left: -100px;
-    top: 20%;
-    opacity: 0.0;
-    z-index: 0;
-}
-
 .services .container {
     position: relative;
     z-index: 1;
@@ -478,40 +465,6 @@ nav {
     color: #ffffff;
 }
 
-/* Decorative Ellipses */
-#why-us::before,
-#why-us::after {
-    content: '';
-    position: absolute;
-    border-radius: 50%;
-    z-index: 1;
-}
-
-#why-us::before {
-    width: 400px;
-    height: 400px;
-    background: #00c4cc;
-    top: -150px;
-    left: -150px;
-    opacity: 0.8;
-}
-
-#why-us::after {
-    width: 507px;
-    height: 507px;
-    background: #ffffff;
-    bottom: -200px;
-    right: -150px;
-    opacity: 0.8;
-}
-
-#faq h2 {
-    text-align: center;
-    font-size: 60px;
-    margin-bottom: 20px;
-    color: var(--dark-color);
-}
-
 /* Mission/Vision Section Cards */
 #mission-vision {
     padding: 80px 5%;
@@ -564,32 +517,6 @@ nav {
     background-color: #ffffff; /* White background for the section */
     position: relative;
     overflow: hidden; /* To contain the decorative ellipses */
-}
-
-#faq::before,
-#faq::after {
-    content: '';
-    position: absolute;
-    border-radius: 50%;
-    background: linear-gradient(to bottom, #00c4cc, #006b6b);
-    z-index: 0;
-}
-
-#faq::before {
-    width: 450px;
-    height: 450px;
-    left: -150px;
-    top: 50%;
-    transform: translateY(-50%);
-    opacity: 0.15;
-}
-
-#faq::after {
-    width: 240px;
-    height: 240px;
-    right: -100px;
-    top: 100px;
-    opacity: 0.15;
 }
 
 .faq-container {
