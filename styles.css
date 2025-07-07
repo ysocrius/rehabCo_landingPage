@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
 
 :root {
-    --primary-color: #00C4CC;
+    --primary-color: #8bf4f7;
     --primary-dark: #006B6B;
     --secondary-color: #000000;
     --text-color: #5F5E5E;
@@ -88,13 +88,13 @@ img {
 
 .section-header h2 {
     font-size: 60px;
-    color: var(--secondary-color);
+    color: #000000;
     margin-bottom: 15px;
 }
 
 .section-header p {
     font-size: 18px;
-    color: var(--text-color);
+    color: #000000;
     max-width: 600px;
     margin: 0 auto;
 }
@@ -216,7 +216,7 @@ nav {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(90deg, rgba(0, 107, 107, 0.8) 0%, rgba(0, 196, 204, 0.4) 100%);
+    background: linear-gradient(90deg, rgba(0, 107, 107, 0.1) 0%, rgba(0, 196, 204, 0.1) 100%);
     z-index: 1;
 }
 
@@ -230,14 +230,15 @@ nav {
     font-size: 70px;
     font-weight: 700;
     margin: 0 0 20px 0;
-    line-height: 1.2;
+    line-height: 82.18px;
+    color: var(--light-color);
 }
 
 .hero p {
     font-size: 18px;
     font-weight: 500;
     margin-bottom: 30px;
-    line-height: 1.7;
+    line-height: 30px;
 }
 
 .hero .cta-button {
@@ -254,6 +255,7 @@ nav {
 
 .hero .cta-button:hover {
     background-color: #f0f0f0;
+    color: #006b6b;
 }
 
 /* Services Section */
@@ -273,7 +275,7 @@ nav {
     border-radius: 50%;
     left: -100px;
     top: 20%;
-    opacity: 0.1;
+    opacity: 0.0;
     z-index: 0;
 }
 
@@ -312,16 +314,16 @@ nav {
 
 .service-card h3 {
     font-size: 25px;
-    color: var(--dark-color);
+    color: #000000;
 }
 
 .service-card p {
-    color: var(--text-color);
+    color: #5f5e5e;
     margin-bottom: 20px;
 }
 
 .service-card .read-more {
-    color: var(--primary-dark);
+    color: #000000;
     font-weight: 700;
     display: inline-flex;
     align-items: center;
@@ -332,7 +334,7 @@ nav {
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 23.5px;
-    border: 1px solid var(--primary-dark);
+    border: 1px solid var(--primary-color);
     background-color: transparent;
     transition: all 0.3s ease;
 }
@@ -341,6 +343,13 @@ nav {
     background-color: var(--primary-dark);
     color: var(--light-color);
 }
+
+.service-card .read-more.primary-button {
+    background-color: #006b6b;
+    color: #ffffff;
+    border-color: #006b6b;
+}
+
 
 /* About Section */
 .about {
@@ -372,81 +381,101 @@ nav {
 
 .about-text h2 {
     margin-bottom: 30px;
+    color: #000000;
 }
 
 .about-text p {
     margin-bottom: 20px;
+    color: #5f5e5e;
+    line-height: 30px;
+    text-align: justify;
 }
 
 /* Why Choose Us Section */
 #why-us {
-    background: linear-gradient(to right, #00c4cc, #006b6b);
-    padding: 100px 5%;
-    position: relative;
+    padding: 80px 0;
     overflow: hidden;
-    color: #ffffff;
 }
 
 #why-us .why-us-content {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-between;
-    gap: 50px;
-    position: relative;
-    z-index: 2;
+    gap: 0;
 }
 
 #why-us .why-us-text {
     flex-basis: 50%;
+    background: linear-gradient(to right, rgba(0, 196, 204, 0.8), rgba(0, 107, 107, 0.8));
+    padding: 60px;
+    color: #ffffff;
 }
 
-#why-us .why-us-text h2,
+#why-us .why-us-bottom {
+    background: var(--light-color);
+    padding: 40px;
+    margin: 40px -60px -60px;
+}
+
+#why-us .why-us-text h2 {
+    color: #ffffff;
+    font-size: 60px;
+    line-height: 70.44px;
+}
+
 #why-us .why-us-text p {
     color: #ffffff;
+    line-height: 30px;
 }
 
 #why-us .why-us-features {
     list-style: none;
     padding: 0;
-    margin: 30px 0;
+    margin: 0 0 30px 0;
 }
 
 #why-us .why-us-features li {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
-    color: #ffffff;
+    color: #006b6b;
+    line-height: 28px;
 }
 
 #why-us .why-us-features img {
     margin-right: 15px;
-    filter: brightness(0) invert(1); /* Makes the check icon white */
+    filter: none;
 }
 
 #why-us .why-us-image {
-    flex-basis: 45%;
+    flex-basis: 50%;
+    position: relative;
 }
 
 #why-us .why-us-image img {
-    max-width: 100%;
-    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
 }
 
 #why-us .read-more {
     background: transparent;
-    color: #ffffff;
-    border: 2px solid #ffffff;
+    color: #006b6b;
+    border: 1px solid #00c4cc;
     padding: 15px 30px;
     border-radius: 9px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18.78px;
     display: inline-block;
     transition: all 0.3s ease;
 }
 
 #why-us .read-more:hover {
-    background: #ffffff;
-    color: #006b6b;
+    background: #00c4cc;
+    color: #ffffff;
 }
 
 /* Decorative Ellipses */
@@ -461,17 +490,19 @@ nav {
 #why-us::before {
     width: 400px;
     height: 400px;
-    background: rgba(255, 255, 255, 0.1);
+    background: #00c4cc;
     top: -150px;
     left: -150px;
+    opacity: 0.8;
 }
 
 #why-us::after {
-    width: 500px;
-    height: 500px;
-    background: rgba(255, 255, 255, 0.1);
+    width: 507px;
+    height: 507px;
+    background: #ffffff;
     bottom: -200px;
     right: -150px;
+    opacity: 0.8;
 }
 
 #faq h2 {
@@ -491,18 +522,40 @@ nav {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
+    position: relative;
 }
 
 .mission-card {
     background-color: var(--light-color);
-    padding: 30px;
+    padding: 40px;
     border-radius: 35px;
     box-shadow: var(--box-shadow);
+    z-index: 2;
 }
 
 .mission-card h3 {
     font-size: 40px;
     margin-bottom: 20px;
+    color: #000000;
+}
+
+.mission-card p {
+    color: #5f5e5e;
+    text-align: justify;
+}
+
+.mission-cards::before {
+    content: '';
+    position: absolute;
+    width: 241px;
+    height: 241px;
+    background: linear-gradient(to bottom, var(--primary-color), var(--primary-dark));
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.1;
+    z-index: 1;
 }
 
 /* FAQ Section */
@@ -559,6 +612,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    line-height: 29.35px;
 }
 
 .faq-toggle {
@@ -628,7 +682,7 @@ nav {
     color: var(--light-color);
     margin-bottom: 20px;
     font-size: 60px;
-    line-height: 1.3;
+    line-height: 80px;
 }
 
 .cta p {
@@ -706,11 +760,13 @@ nav {
 .blog-content h3 {
     font-size: 30px;
     margin-bottom: 15px;
+    line-height: 40px;
 }
 
 .blog-content p {
     margin-bottom: 20px;
     flex: 1;
+    text-align: justify;
 }
 
 /* Contact Section */
@@ -735,13 +791,16 @@ nav {
 }
 
 .contact-form h2 {
-    color: var(--secondary-color);
+    color: #000000;
     margin-bottom: 15px;
     font-size: 60px;
+    line-height: 70.44px;
 }
 
 .contact-form p {
     margin-bottom: 30px;
+    color: #000000;
+    line-height: 30px;
 }
 
 .contact-image img {
@@ -763,6 +822,8 @@ nav {
     border-radius: 5px;
     font-size: 16px;
     font-family: 'Raleway', sans-serif;
+    line-height: 28px;
+    color: #5f5e5e;
 }
 
 .form-group textarea {
@@ -785,7 +846,7 @@ nav {
     padding: 0 44px;
     font-size: 16px;
     font-weight: 700;
-    line-height: 19px;
+    line-height: 18.78px;
     text-align: center;
     text-transform: uppercase;
     cursor: pointer;
@@ -826,7 +887,7 @@ nav {
 .newsletter-text h2 {
     color: var(--light-color);
     font-size: 60px;
-    line-height: 1.2;
+    line-height: 70.44px;
     margin: 0;
 }
 
@@ -847,6 +908,7 @@ nav {
     color: var(--light-color);
     font-size: 18px;
     font-family: 'Raleway', sans-serif;
+    line-height: 30px;
 }
 
 .newsletter-form input::placeholder {
@@ -866,6 +928,8 @@ nav {
     border-radius: 9px;
     cursor: pointer;
     font-weight: 700;
+    font-size: 16px;
+    line-height: 18.78px;
     transition: all 0.3s ease;
 }
 
@@ -949,10 +1013,13 @@ footer {
 .footer-section h3 {
     margin-bottom: 20px;
     font-size: 25px;
+    line-height: 29.35px;
 }
 
 .footer-section p {
     margin-bottom: 20px;
+    text-align: justify;
+    line-height: 30px;
 }
 
 .footer-section ul {
@@ -963,6 +1030,7 @@ footer {
 
 .footer-section ul li {
     margin-bottom: 15px;
+    line-height: 40px;
 }
 
 .footer-section ul li a {
@@ -1018,6 +1086,11 @@ footer {
     align-items: center;
 }
 
+.footer-bottom p {
+    color: #301712;
+    line-height: 29.28px;
+}
+
 .contact-item {
     display: flex;
     align-items: flex-start;
@@ -1028,6 +1101,7 @@ footer {
     display: flex;
     align-items: center;
     margin-bottom: 0;
+    line-height: 30px;
 }
 
 .contact-item img {
@@ -1042,9 +1116,7 @@ footer {
     position: relative;
     overflow: hidden;
     text-decoration: none;
-    color: white;
     cursor: pointer;
-    background: var(--gradient-primary);
     transition: all 0.3s ease;
 }
 
